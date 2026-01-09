@@ -12,7 +12,6 @@ import java.util.UUID;
                 @Index(name = "ix_list_items_list", columnList = "list_id"),
                 @Index(name = "ix_list_items_status", columnList = "status")
         }
-        // Optional: add a partial unique in SQL to prevent dup active rows per (list,item)
 )
 public class ListItem {
 
@@ -44,7 +43,7 @@ public class ListItem {
     @Column(length = 300)
     private String notes;
 
-    // Who added/purchased (audit)
+    // Who added/purchased
     @ManyToOne(optional = false)
     @JoinColumn(name = "added_by", nullable = false)
     private User addedBy;

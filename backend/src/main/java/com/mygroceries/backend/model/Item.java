@@ -15,13 +15,13 @@ public class Item {
     @Column(nullable = false, unique = true)
     private String name;
 
-    private String category;         // e.g. Dairy, Fruits, Beverages
-    private String defaultUnit;      // e.g. kg, L, pack
+    private String category;
+    private String defaultUnit;
     private boolean isActive = true;
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    // 🔧 Constructors
+    //Constructors
     public Item() {}
 
     public Item(String name, String category, String defaultUnit) {

@@ -20,7 +20,7 @@ public class GroceryList {
     @JoinColumn(name = "household_id", nullable = false)
     private Household household;
 
-    // Who created the list (for audit/UI)
+    // Who created the list
     @ManyToOne(optional = false)
     @JoinColumn(name = "created_by", nullable = false)
     private User createdBy;

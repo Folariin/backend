@@ -23,7 +23,6 @@ public class Household {
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    // Optional: navigate to members (M:N realized via HouseholdMember)
     @OneToMany(mappedBy = "household", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<HouseholdMember> members = new HashSet<>();
 
